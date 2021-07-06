@@ -16,8 +16,6 @@ class TrackableDateModel(models.Model):
 class File(TrackableDateModel):
     image = models.ImageField(
         upload_to='images/%Y/%m/%d/', default='/default.png', blank=True, null=True)
-    file = models.FileField(
-        upload_to='files/%Y/%m/%d/',  blank=True, null=True)
 
     def __str__(self):
         return self.image

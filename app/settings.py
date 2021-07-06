@@ -15,7 +15,7 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '-f^&musa-5v7vhcgp!9yg06!*ehi(19rf*9pdf$*w-m2s)hgge'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -205,7 +205,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=6*30),
 }
 
-
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 REST_REGISTRATION = {
     'REGISTER_VERIFICATION_URL': 'http://localhost:8080/verify-user/',
     'RESET_PASSWORD_VERIFICATION_URL': 'http://localhost:8080/reset-password/',
